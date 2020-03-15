@@ -12,13 +12,13 @@ import Logger.Logger;
 public class Cliente {
 
 	/**
-	 * Puerto de la conexión
+	 * Puerto de la conexion
 	 */
 	public final static int puerto = 10272;
 	/**
-	 * Dirección IP del servidor y carpeta donde se va a guardar el arhivo transferido al cliente
+	 * Direccion IP del servidor y carpeta donde se va a guardar el arhivo transferido al cliente
 	 */
-	public static final String direccion = "localhost", RUTA = "./dataCliente/";
+	public static final String direccion = "127.0.0.1", RUTA = "./dataCliente/";
 
 	/**
 	 * Espacio para el archivo
@@ -54,8 +54,8 @@ public class Cliente {
 
 			socket.getOutputStream().flush();
 			timer.start();
-			InputStream is = socket.getInputStream(); // recepción del socket
-			byte mybytearray[] = new byte[tamanio]; // representación byte a byte del archivo
+			InputStream is = socket.getInputStream(); // recepciï¿½n del socket
+			byte mybytearray[] = new byte[tamanio]; // representaciï¿½n byte a byte del archivo
 			fileOut = new FileOutputStream(RUTA + "SocketPort" + socket.getLocalPort() + ".mp4"); // Stream de envio de archivos
 			outs = new BufferedOutputStream(fileOut); // Stream de escritura del cliente
 			bytesRead = is.read(mybytearray, 0, mybytearray.length);

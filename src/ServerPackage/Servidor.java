@@ -20,16 +20,16 @@ public class Servidor {
 			System.out.println("Archivos disponibles para transefir a los clientes: \n "
 					+ "\n Multimedia.mp4 \n NoMultimedia");
 			archivo = sc.nextLine();
-			System.out.println("Ingrese:\n\t[y/s/1] si desea una conexión con el cliente\n\t[n] Si desea ajustar el tamaño del buffer");
+			System.out.println("Ingrese:\n\t[y/s/1] si desea una conexion con el cliente\n\t[n] Si desea ajustar el tamano del buffer");
 			result = sc.nextLine();
 			if(result.contains("y")||result.contains("s")||result.contains("1"))
 				mode=false;
 			if(mode) {
-				System.out.println("Debido al modo de conexión \n ingrese el tamaño del buffer...");
+				System.out.println("Debido al modo de conexion \n ingrese el tamano del buffer...");
 				cantidad=sc.nextInt();
 				System.out.println();
 			}
-			System.out.println("Esperando a por conexiónes en modo "+((mode)?cantidad+" ":"")+" "+((mode)?"servidor":"cliente")+"...");
+			System.out.println("Esperando a por conexiones en modo "+((mode)?cantidad+" ":"")+" "+((mode)?"servidor":"cliente")+"...");
 			/*________________________________________________________*/
 
 			servsuck = new ServerSocket(SOCKET_PORT);
