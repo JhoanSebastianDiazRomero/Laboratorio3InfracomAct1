@@ -18,7 +18,7 @@ public class Cliente {
 	/**
 	 * Direccion IP del servidor y carpeta donde se va a guardar el arhivo transferido al cliente
 	 */
-	public static final String direccion = "127.0.0.1", RUTA = "./dataCliente/";
+	public static final String direccion = "localhost", RUTA = "./dataCliente/";
 
 	/**
 	 * Espacio para el archivo
@@ -72,14 +72,14 @@ public class Cliente {
 			outs.flush();
 
 
-			int size =(int) (new File(RUTA + "fileof" + socket.getLocalPort() + ".mp4").length()), paqs =(int) size/div +1;
+			int size =(int) (new File(RUTA + "SocketPort" + socket.getLocalPort() + ".mp4").length()), paqs =(int) size/div +1;
 
 			socket.getOutputStream().flush();
 			boolean correcto = hash.equals(CheckSum.checksum(RUTA + "SocketPort" + socket.getLocalPort() + ".mp4"));
 			System.out.println("El archivo fue recibido "+((correcto)?"correctamente":"incorrectamente"));
 			System.out.println("El archivo fue descargado (" + current + " bytes leidos)");
 			Logger.loggear(new LoggerInfo("socket "+socket.getLocalPort(), timer.stop()+"", paqs, paqs, size, size),
-					RUTA + "fileof" + socket.getLocalPort() + ".mp4",
+					RUTA + "SocketPort" + socket.getLocalPort() + ".mp4",
 					size);
 		} 
 		//Cerrar todos los canales

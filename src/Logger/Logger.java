@@ -17,7 +17,7 @@ public class Logger {
 			printw = new PrintWriter(fileW, true);
 			printw.println("Fecha: " + new Date(time.getTime()));
 			printw.println("Hora: " + time.getHours() + ":" + time.getMinutes());
-			printw.println("Archivo: " + nombre + " Tamaño: " + tamanio);
+			printw.println("Archivo: " + nombre + " Tamanio: " + tamanio);
 			String cadena = "";
 			cadena += "Cliente: " + in.getCliente() + "\n";
 			cadena += "Tiempo total de transferencia de archivo: " + in.getTransferencia() + " ms\n";

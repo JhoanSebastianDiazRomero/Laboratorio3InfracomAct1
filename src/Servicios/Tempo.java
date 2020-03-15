@@ -1,7 +1,7 @@
 package Servicios;
 
 /**
- * Clase para medir el tiempo total de transmisión de una transferencia
+ * Clase para medir el tiempo total de transmision de una transferencia
  * @author hecto
  *
  */
